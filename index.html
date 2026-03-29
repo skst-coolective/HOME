@@ -1,56 +1,68 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SKST Collective</title>
+  <title>Subtextura Valencia 2026 — SKST Collective</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
+    :root {
+      --bg: #040144;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.72);
+      --soft: rgba(255, 255, 255, 0.18);
+      --max: 1200px;
+      --text: 760px;
+    }
+
     html, body {
       margin: 0;
       min-height: 100%;
-      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-      background: #040144;
-      color: #ffffff;
+      background: var(--bg);
+      color: var(--fg);
     }
 
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 40px 24px 80px;
     }
 
-    .wrap {
+    .page {
       width: 100%;
-      max-width: 1100px;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .hero {
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
+    .display {
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    }
+
     h1 {
       margin: 0;
-      font-size: clamp(44px, 9vw, 120px);
-      line-height: 0.95;
+      font-size: clamp(44px, 8vw, 108px);
+      line-height: 0.92;
       letter-spacing: 0.04em;
-      font-weight: 400;
       text-transform: uppercase;
-      color: #ffffff;
+      font-weight: 400;
     }
 
     .subtitle {
-      margin-top: 18px;
-      font-size: clamp(16px, 2vw, 24px);
-      color: #ffffff;
-      letter-spacing: 0.08em;
+      margin-top: 16px;
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+      font-size: clamp(15px, 2vw, 24px);
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      font-weight: 400;
+      color: var(--muted);
     }
 
     .poster {
@@ -62,38 +74,154 @@
 
     .poster img {
       display: block;
-      width: min(720px, 100%);
+      width: min(920px, 100%);
       height: auto;
     }
 
     .email {
       display: inline-block;
-      margin-top: 42px;
-      font-size: clamp(18px, 2.2vw, 28px);
-      color: #ffffff;
+      margin-top: 34px;
+      color: var(--fg);
       text-decoration: none;
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 2px solid var(--fg);
       padding-bottom: 6px;
-      transition: opacity 0.2s ease;
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+      font-size: clamp(18px, 2vw, 26px);
+      line-height: 1.2;
       word-break: break-word;
-      font-weight: 400;
+      transition: opacity 0.2s ease;
     }
 
     .email:hover {
-      opacity: 0.65;
+      opacity: 0.7;
+    }
+
+    .press-release {
+      width: 100%;
+      max-width: var(--text);
+      margin: 72px auto 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--soft);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .press-title {
+      margin: 0;
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .dek {
+      margin: 18px 0 0;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.45;
+      color: var(--fg);
+      max-width: 680px;
+    }
+
+    .meta {
+      margin-top: 24px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .content {
+      margin-top: 34px;
+    }
+
+    .content p {
+      margin: 0 0 22px;
+      font-size: clamp(17px, 1.45vw, 19px);
+      line-height: 1.78;
+      color: var(--fg);
+    }
+
+    .section-label {
+      margin: 42px 0 16px;
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 28px 18px 56px;
+      }
+
+      .press-release {
+        margin-top: 56px;
+      }
+
+      .content p {
+        line-height: 1.68;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>SUBTEXTURA<br>VALENCIA 2026</h1>
-    <div class="subtitle">SKST Collective</div>
+  <main class="page">
+    <section class="hero">
+      <h1 class="display">SUBTEXTURA<br>VALENCIA 2026</h1>
+      <div class="subtitle">SKST Collective</div>
 
-    <div class="poster">
-      <img src="posters.png" alt="Subtextura posters" />
-    </div>
+      <div class="poster">
+        <img src="posters.png" alt="Subtextura Valencia 2026 posters" />
+      </div>
 
-    <a class="email" href="mailto:info@skst-collective.com">info@skst-collective.com</a>
+      <a class="email" href="mailto:info@skst-collective.com">info@skst-collective.com</a>
+    </section>
+
+    <section class="press-release">
+      <p class="eyebrow">Press Release</p>
+      <h2 class="press-title">Subtextura Valencia 2026</h2>
+
+      <p class="dek">
+        Subtextura is an ongoing multidisciplinary project by the Strawberry Kiss Sweet Trinity collective dedicated to reflecting on ambivalences and shady areas of socio-political discourse that populate our everyday life.
+      </p>
+
+      <div class="meta">
+        Strawberry Kiss Sweet Trinity / La Cotorra Galería / Valencia / 2026
+      </div>
+
+      <div class="content">
+        <p>
+          Subtextura is an ongoing multidisciplinary project by the Strawberry Kiss Sweet Trinity collective dedicated to reflecting on ambivalences and shady areas of socio-political discourse that populate our everyday life. The project invites the viewers to decode concealed messages and to search for non-obvious answers — and, at times, non-obvious questions.
+        </p>
+
+        <p>
+          Following its foundation in 2025, the artists contributed their first piece, <em>Subtextura-I</em>, for the CultTech Summit in Vienna. With an updated scenography, this immersive installation, presented in a small room of the gallery, examines the phenomenon of conspiracy thinking. Developed with technical and conceptual support from the Artivive team and employing its augmented reality technology to semantically extend the staged reality in an escape room gameplay, SKST transforms everyday domestic objects — often branded, omnipresent, and long rendered invisible by banner blindness — in order to suggest that someone else, apparently, may see the world in a way entirely different from what is expected.
+        </p>
+
+        <p>
+          For the opening of La Cotorra Galería, SKST premieres the second iteration of their project. <em>Subtextura-II</em> is a graphic series which reorients the attention from the anthropological survey of today towards speculation about not-so-distant tomorrow and translates the idea of layered perception into the language of visible light. Under the daylight, the pieces displaying speculative technologies of the future blend various pictorial paradigms and communicative strategies — from engineering blueprints and AI-generated vector style to marketing slogans and science-like commentary. In this way, the artists develop a kind of meta-collage that juxtaposes not the images but rather modalities, revealing the trend towards deeper entanglement between commerce, science and technology.
+        </p>
+
+        <p>
+          Yet when the normal light goes down, UV-lamps bring the underside to the fore, ranging from meaningful critique to blatant conspiracy theorising, thus blurring the boundaries of the normative perception of reality. In this way, the disoriented viewer gets caught in a rhythmic choreography of light and darkness, visible and hidden, fiction and truth.
+        </p>
+
+        <p class="section-label">About the collective</p>
+
+        <p>
+          Strawberry Kiss Sweet Trinity (est. 2025, unbased geographically) is an artistic collective founded by an editor, Olga Lukianova, a curator, Artem Timonov and a set designer, Peter Voznesensky. Borrowing its cheesy, ready-made title from a Starbucks bun, the artists extend contemporary media and technologies in unconventional ways. Operating on the crossroads of diverse realms from politics and economics to media art and stage design, SKST balances between piercing social critique and a plea for humanist sentiment in the interesting times that we live in.
+        </p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
