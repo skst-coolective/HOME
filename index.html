@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -55,9 +55,18 @@
       text-transform: uppercase;
       font-weight: 400;
     }
-
+.collective-name {
+  display: inline-block;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1;
+  margin: 0 0.12em 0.08em 0;
+  padding: 0.04em 0.16em 0.08em;
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
     .subtitle {
-      margin-top:v0px;
+      margin-top: 0;
       font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
       font-size: clamp(15px, 2vw, 24px);
       letter-spacing: 0.14em;
@@ -80,7 +89,6 @@
 
     .email {
       display: inline-block;
-      margin-top: 34px;
       color: var(--fg);
       text-decoration: none;
       border-bottom: 2px solid var(--fg);
@@ -113,31 +121,6 @@
       color: var(--muted);
     }
 
-    .press-title {
-      margin: 0;
-      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-      font-size: clamp(28px, 4vw, 48px);
-      line-height: 1.02;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .dek {
-      margin: 18px 0 0;
-      font-size: clamp(18px, 2vw, 24px);
-      line-height: 1.45;
-      color: var(--fg);
-      max-width: 680px;
-    }
-
-    .meta {
-      margin-top: 24px;
-      font-size: 14px;
-      line-height: 1.5;
-      color: var(--muted);
-      letter-spacing: 0.02em;
-    }
-
     .content {
       margin-top: 34px;
     }
@@ -158,6 +141,28 @@
       color: var(--muted);
     }
 
+    .contact-block {
+      width: 100%;
+      max-width: var(--text);
+      margin: 72px auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .map-wrap {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .map-wrap iframe {
+      display: block;
+      width: 100%;
+      height: clamp(260px, 42vw, 420px);
+      border: 0;
+    }
+
     @media (max-width: 700px) {
       body {
         padding: 28px 18px 56px;
@@ -170,27 +175,36 @@
       .content p {
         line-height: 1.68;
       }
+
+      .contact-block {
+        margin-top: 48px;
+        gap: 28px;
+      }
+
+      .map-wrap iframe {
+        height: 260px;
+      }
     }
   </style>
 </head>
 <body>
   <main class="page">
     <section class="hero">
-     
-    <p>
-          <p>
       <h1 class="display">Subtextura</h1>
-                <p>
-      <div class="subtitle">by Strawberry Kiss Sweet Trinity<br>from 2 April 2026<br>at La Cotorra Galeria</div>
+      <div class="subtitle">
+        by Strawberry Kiss Sweet Trinity<br>
+        from 2 April 2026<br>
+        at La Cotorra Galeria
+      </div>
 
       <div class="poster">
         <img src="posters.png" alt="Subtextura Valencia 2026 posters" />
       </div>
-
-        </section>
+    </section>
 
     <section class="press-release">
       <p class="eyebrow">Press Release</p>
+
       <div class="content">
         <p>
           Subtextura is an ongoing multidisciplinary project by the Strawberry Kiss Sweet Trinity collective dedicated to reflecting on ambivalences and shady areas of socio-political discourse that populate our everyday life. The project invites the viewers to decode concealed messages and to search for non-obvious answers — and, at times, non-obvious questions.
@@ -210,19 +224,26 @@
 
         <p class="section-label">About the collective</p>
 
-        <p>
-          Strawberry Kiss Sweet Trinity (est. 2025, unbased geographically) is an artistic collective founded by an editor, Olga Lukianova, a curator, Artem Timonov and a set designer, Peter Voznesensky. Borrowing its cheesy, ready-made title from a Starbucks bun, the artists extend contemporary media and technologies in unconventional ways. Operating on the crossroads of diverse realms from politics and economics to media art and stage design, SKST balances between piercing social critique and a plea for humanist sentiment in the interesting times that we live in.
-        </p>
+       <p>
+  <span class="collective-name">Strawberry Kiss Sweet Trinity</span>
+  (est. 2025, unbased geographically) is an artistic collective founded by an editor, Olga Lukianova, a curator, Artem Timonov and a set designer, Peter Voznesensky. Borrowing its cheesy, ready-made title from a Starbucks bun, the artists extend contemporary media and technologies in unconventional ways. Operating on the crossroads of diverse realms from politics and economics to media art and stage design, SKST balances between piercing social critique and a plea for humanist sentiment in the interesting times that we live in.
+</p>
       </div>
     </section>
-       <section class="hero">
-    <p>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192.49454361748784!2d-0.38104465601439197!3d39.47130093708574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4ec12fd6fd%3A0x2ec981a7e6dc276b!2sC%2F%20de%20l&#39;Editor%20Cabrerizo%2C%205!5e0!3m2!1sen!2ses!4v1774812779276!5m2!1sen!2ses" width="700" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- <p>
-        <a class="email" href="mailto:info@skst-collective.com">info@skst-collective.com</a>
- </p>
-       </section>
 
+    <section class="contact-block">
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192.49454361748784!2d-0.38104465601439197!3d39.47130093708574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4ec12fd6fd%3A0x2ec981a7e6dc276b!2sC%2F%20de%20l&#39;Editor%20Cabrerizo%2C%205!5e0!3m2!1sen!2ses!4v1774812779276!5m2!1sen!2ses"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="La Cotorra Galería map">
+        </iframe>
+      </div>
+
+      <a class="email" href="mailto:info@skst-collective.com">info@skst-collective.com</a>
+    </section>
   </main>
 </body>
 </html>
